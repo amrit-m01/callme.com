@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CallMe</title>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 18+ Permission Screen -->
+  <div id="age-check">
+    <h2>Are you 18 or older?</h2>
+    <button id="btn" onclick="allowAccess()">Yes, I am 18+</button>
+    <ul>
+      <li>Besically this website is designed for adults to find friends or make new acquaintances.
+      </li>
+      <li>
+        This website, made for adults, never displays anything bad.
+      </li>
+      <li>
+        However, if a user says or displays something bad, the authorities will not take responsibility.
+      </li>
+      <li>
+        Let's prove ourselves adults and find new friends and make acquaintances at home and abroad.
+      </li>
+     </ul>
+  </div>
+
+  <!-- Main App -->
+  <header>
+    <img src="image2.png" alt="Logo" width="250">
+</header>
+  <div id="main-app" style="display:none;">
+    <div id="video-chat">
+      <video id="remoteVideo" autoplay></video><br>
+      <video id="localVideo" autoplay muted></video>
+    </div>
+
+    <!-- Mute and Camera Off buttons (Initially hidden) -->
+    <div id="controls" style="display: none;">
+      <button id="muteButton" onclick="toggleMute()">Mute</button>
+      <button id="cameraButton" onclick="toggleCamera()">Camera Off</button>
+    </div>
+    <button id="callButton" onclick="startCall()">Start Call</button>
+    <p>
+      As we come to the end of this short journey, callme.com would like to express our heartfelt greetings and immense gratitude to you. You have given your time, placed your trust, and been a part of our journey—this is not just the story of a journey, but a reflection of a unique relationship we have built with you.<br>callme.com started its journey with a simple dream—to create a place where people can easily connect with each other, meet new people, and experience new things in every moment. You are an important partner in the journey of this dream, for which we are proud and grateful.<br>
+      We believe that every moment on this platform was joyful, meaningful, and memorable for you. If a conversation brought you joy, if an acquaintance inspired you—then our efforts have been worthwhile.<br>callme.com is not just a website—it is an open space, where every user can color it in their own way. And your presence has made this colorful picture even more vibrant.<br>We are constantly striving to add new features, advanced technology, and user-friendly experiences to deliver on our promise to you. Your feedback, suggestions, and support are our driving force, and our inspiration to come up with something new and exciting in the future.<br>May your day be filled with joy, and may your future be filled with success, connections, and possibilities. We will meet again—in a new moment, in a new identity. Thank you.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
